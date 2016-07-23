@@ -1,8 +1,8 @@
 <?php
 if (isset($_REQUEST["on"]))
-	exec('python /home/robot/projects/lego-nxt/motor.py');
+	echo exec('python /home/robot/projects/lego-nxt/motor.py');
 elseif (isset($_REQUEST["off"]))
-	exec('python /home/robot/projects/lego-nxt/motor.py');
+	echo exec('python /home/robot/projects/lego-nxt/motor.py');
 ?>
 <html>
 	<head>
