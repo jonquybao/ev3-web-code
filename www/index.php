@@ -29,12 +29,13 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<?php
+			<h1><?php
 			if (isset($_REQUEST["on"]))
 				echo exec('python /home/robot/projects/lego-nxt/motor.py');
 			elseif (isset($_REQUEST["off"]))
 				echo exec('python /home/robot/projects/lego-nxt/motor.py');
 			?>
+			</h1>
 			<div id="button">
 				<img id="img" src="off.png">
 			</div>
