@@ -1,9 +1,3 @@
-<?php
-if (isset($_REQUEST["on"]))
-	echo exec('python /home/robot/projects/lego-nxt/motor.py');
-elseif (isset($_REQUEST["off"]))
-	echo exec('python /home/robot/projects/lego-nxt/motor.py');
-?>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="reset.css" />
@@ -35,6 +29,12 @@ elseif (isset($_REQUEST["off"]))
 	</head>
 	<body>
 		<div class="wrapper">
+			<?php
+			if (isset($_REQUEST["on"]))
+				echo exec('python /home/robot/projects/lego-nxt/motor.py');
+			elseif (isset($_REQUEST["off"]))
+				echo exec('python /home/robot/projects/lego-nxt/motor.py');
+			?>
 			<div id="button">
 				<img id="img" src="off.png">
 			</div>
