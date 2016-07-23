@@ -31,6 +31,12 @@
 		<div class="wrapper">
 			<h1><?php
 			if (isset($_REQUEST["on"])){
+				$file = "/sys/class/tacho-motor/motor0/speed_sp";
+				die(file_put_contents($file, "500"));
+
+				$file = "/sys/class/tacho-motor/motor0/command";
+				die(file_put_contents($file, "run-forever"));
+
 				echo exec('python /home/robot/projects/lego-nxt/motor.py 2>&1', $output);
 				print_r($output);
 			}
