@@ -2,6 +2,9 @@
 $file = "/sys/class/leds/ev3::outA/brightness";
 if (isset($_REQUEST["on"]))
 	echo exec('python /home/robot/projects/lego-nxt/motor.py');
+    $command = escapeshellcmd('/home/robot/projects/lego-nxt/motor.py');
+	$output = shell_exec($command);
+	echo $output;
 elseif (isset($_REQUEST["off"]))
 	die(file_put_contents($file, "0"));
 ?>
